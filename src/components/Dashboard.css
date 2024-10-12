@@ -1,0 +1,111 @@
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.header {
+  background-color: var(--header-bg-color);
+  color: var(--header-text-color);
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.header h1 {
+  margin: 0;
+}
+
+.logout-btn, .theme-toggle-btn {
+  background-color: var(--button-bg-color);
+  color: var(--button-text-color);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-left: 1rem;
+}
+
+.logout-btn:hover, .theme-toggle-btn:hover {
+  background-color: var(--button-hover-bg-color);
+}
+
+.navbar {
+  background-color: var(--navbar-bg-color);
+  padding: 0.5rem 1rem;
+  width: 100%;
+}
+
+.navbar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.navbar li {
+  margin-right: 1rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.navbar li:hover, .navbar li.active {
+  background-color: var(--navbar-active-bg-color);
+  color: var(--navbar-active-text-color);
+}
+
+.main-content {
+  flex-grow: 1;
+  padding: 2rem;
+  overflow-y: auto;
+  width: 100%;
+}
+
+.footer {
+  background-color: var(--footer-bg-color);
+  color: var(--footer-text-color);
+  text-align: center;
+  padding: 1rem;
+  width: 100%;
+}
+
+/* Light mode */
+:root {
+  --bg-color: #f0f0f0;
+  --text-color: #333;
+  --header-bg-color: #4a90e2;
+  --header-text-color: white;
+  --button-bg-color: #f0f0f0;
+  --button-text-color: #4a90e2;
+  --button-hover-bg-color: #e0e0e0;
+  --navbar-bg-color: #e0e0e0;
+  --navbar-active-bg-color: #4a90e2;
+  --navbar-active-text-color: white;
+  --footer-bg-color: #333;
+  --footer-text-color: white;
+}
+
+/* Dark mode */
+.dark-mode {
+  --bg-color: #333;
+  --text-color: #f0f0f0;
+  --header-bg-color: #1a1a1a;
+  --header-text-color: #61dafb;
+  --button-bg-color: #61dafb;
+  --button-text-color: #1a1a1a;
+  --button-hover-bg-color: #4fa8d5;
+  --navbar-bg-color: #1a1a1a;
+  --navbar-active-bg-color: #61dafb;
+  --navbar-active-text-color: #1a1a1a;
+  --footer-bg-color: #1a1a1a;
+  --footer-text-color: #61dafb;
+}
